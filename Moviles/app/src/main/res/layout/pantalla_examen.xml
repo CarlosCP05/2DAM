@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewEx1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/examen_de_andriod"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewEx2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/_1_datos_del_alumno"
+        android:textSize="18sp"
+        android:textColor="#0EAB9E"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEx1" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="16dp"
+        app:boxStrokeColor="#CACACA"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewEx2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewEx2"
+        app:layout_constraintTop_toTopOf="@+id/textViewEx2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:text="@string/nombre_completo"
+            android:textSize="13sp"
+            android:textColor="#025439" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputCorreo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="16dp"
+        app:boxStrokeColor="#CACACA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNombre">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="13sp"
+            android:text="@string/correo_electronico"
+            android:textColor="#025439" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCorreo"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pts"
+            android:textAlignment="center"
+            android:textColor="#B8B8B8"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="#9D9D9D" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewEx3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/_2_selecciona_la_respuesta_correcta"
+        android:textColor="#0EAB9E"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/textViewEx4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/componente_Ex"
+        android:textColor="#434343"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.483"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewEx4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/opcion_componente_1"
+            app:buttonTint="#277A6C" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/opcion_componente_2"
+            app:buttonTint="#277A6C" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/opcion_componente_3"
+            app:buttonTint="#277A6C" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pts"
+            android:textAlignment="center"
+            android:textColor="#B8B8B8"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="#9D9D9D" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewEx5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/_3_selecciona_todas_la_que_apliquen"
+        android:textColor="#0EAB9E"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintStart_toEndOf="@id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textViewEx6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="12dp"
+        android:text="@string/componente2_Ex"
+        android:textColor="#434343"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEx6"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/box1"
+            app:buttonTint="#277A6C" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/box2"
+            app:buttonTint="#277A6C" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/box3"
+            app:buttonTint="#277A6C" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/box4"
+            app:buttonTint="#277A6C" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        tools:ignore="DuplicateIds,MissingConstraints">
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pts"
+            android:textAlignment="center"
+            android:textColor="#B8B8B8"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="#9D9D9D" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewEx7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/_4_pregunta_de_desarrollo"
+        android:textColor="#0EAB9E"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputDependency"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        app:boxStrokeColor="#CACACA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHeight_percent="0.13"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:inputType="text"
+            android:text="@string/explica"
+            android:textSize="13sp"
+            android:textColor="#025439" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAceptar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/enviar_examen"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#02CCD2"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputDependency"
+        app:layout_constraintWidth_percent="0.93" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
