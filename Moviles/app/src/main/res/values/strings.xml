@@ -16,4 +16,23 @@
     <string name="faltas_equipo1">0</string>
     <string name="faltas_equipo2">0</string>
     <string name="faltas">Faltas</string>
+    <string name="examen_de_andriod">Examen de Andriod</string>
+    <string name="_1_datos_del_alumno">1. Datos del Alumno</string>
+    <string name="nombre_completo">Nombre completo</string>
+    <string name="correo_electronico">Correo electrónico</string>
+    <string name="_2_selecciona_la_respuesta_correcta">2. Selecciona la respuesta correcta</string>
+    <string name="pts">Pts</string>
+    <string name="componente_Ex">¿Qué componente se utiliza para crear diseños flexibles?</string>
+    <string name="opcion_componente_1">LinearLayout</string>
+    <string name="opcion_componente_2">ConstaintLayout</string>
+    <string name="opcion_componente_3">FrameLayout</string>
+    <string name="_3_selecciona_todas_la_que_apliquen">3. Selecciona todas la que apliquen</string>
+    <string name="componente2_Ex">¿Cúales son componentes de la arquitectura Andriod?</string>
+    <string name="box1">Activity</string>
+    <string name="box2">ViewModel</string>
+    <string name="box3">JavaScript</string>
+    <string name="box4">Repository</string>
+    <string name="_4_pregunta_de_desarrollo">4. Pregunta de desarrollo</string>
+    <string name="enviar_examen">Enviar Examen</string>
+    <string name="explica">Explica qué es Dependency Injection</string>
 </resources>
