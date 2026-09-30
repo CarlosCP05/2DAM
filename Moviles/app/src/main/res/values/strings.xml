@@ -14,5 +14,6 @@
     <string name="compartir">COMPARTIR</string>
     <string name="suma">+</string>
     <string name="faltas_equipo1">0</string>
+    <string name="faltas_equipo2">0</string>
     <string name="faltas">Faltas</string>
 </resources>
