@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">XML</string>
+    <string name="_10_00">10 : 00</string>
+    <string name="_1grad">1.º</string>
+    <string name="_1">+1</string>
+    <string name="_2">+2</string>
+    <string name="_3">+3</string>
+    <string name="equipo1">Equipo1</string>
+    <string name="marcador_equipo1">34</string>
+    <string name="x">X</string>
+    <string name="equipo2">Equipo2</string>
+    <string name="marcador_equipo2">18</string>
+    <string name="editar">EDITAR</string>
+    <string name="compartir">COMPARTIR</string>
+    <string name="suma">+</string>
+    <string name="faltas_equipo1">0</string>
+    <string name="faltas">Faltas</string>
+</resources>
