@@ -56,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="130dp" />
+        app:layout_constraintGuide_percent="0.17920657" />
 
     <TextView
         android:id="@+id/textView1"
@@ -150,7 +150,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="390dp" />
+        app:layout_constraintGuide_percent="0.53351575" />
 
     <TextView
         android:id="@+id/textView7"
@@ -205,7 +205,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/equipo1"
+        android:text="@string/equipo2"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -311,7 +311,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:text="@string/faltas_equipo1"
+        android:text="@string/faltas_equipo2"
         android:textSize="52sp"
         android:textColor="#FFFF00"
         android:fontFamily="@font/DS_DIGI"
