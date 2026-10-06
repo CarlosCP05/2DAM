@@ -1,4 +1,4 @@
-package org.example.Ejercicios.Ejercicio2;
+package org.example.Ejercicios.Hilos.Sincrona.Ejercicio2;
 
 public class Ejercicio2_1 {
 

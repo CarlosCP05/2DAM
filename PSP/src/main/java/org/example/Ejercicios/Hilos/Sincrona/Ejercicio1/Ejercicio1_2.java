@@ -1,4 +1,4 @@
-package org.example.Ejercicios.Ejercicio1;
+package org.example.Ejercicios.Hilos.Sincrona.Ejercicio1;
 
 public class Ejercicio1_2 implements Runnable {
     @Override
