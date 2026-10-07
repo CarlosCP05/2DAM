@@ -2,7 +2,7 @@ package org.example.Ejercicios.Hilos.Asincronos;
 
 import java.util.concurrent.*;
 
-public class Ejercicio3 {
+public class Ejercicio4 {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         long inicio = System.currentTimeMillis();
         ExecutorService executor = Executors.newFixedThreadPool(2);
@@ -22,9 +22,9 @@ public class Ejercicio3 {
             return 30;
         };
 
+        Future<Integer> resultado3 = executor.submit(tarea3);
         Future<Integer> resultado1 = executor.submit(tarea1);
         Future<Integer> resultado2 = executor.submit(tarea2);
-        Future<Integer> resultado3 = executor.submit(tarea3);
 
         System.out.println("Inciando tareas...");
         System.out.println(resultado1.get() + resultado2.get() + resultado3.get());
