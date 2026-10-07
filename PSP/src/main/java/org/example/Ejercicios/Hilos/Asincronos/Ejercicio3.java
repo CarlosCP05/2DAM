@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 public class Ejercicio3 {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         long inicio = System.currentTimeMillis();
-        ExecutorService executor = Executors.newFixedThreadPool(3);
+        ExecutorService executor = Executors.newFixedThreadPool(2);
 
         Callable<Integer> tarea1 = () -> {
             Thread.sleep(2000);
