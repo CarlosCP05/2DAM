@@ -1,4 +1,4 @@
-package org.example.Ejercicios.Hilos.Sincrona.Ejercicios5;
+package org.example.Ejercicios.Hilos.Sincronos.Ejercicios5;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
