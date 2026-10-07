@@ -1,4 +1,4 @@
-package org.example.Ejercicios.Hilos.Sincrona.Ejercicios7;
+package org.example.Ejercicios.Hilos.Sincronos.Ejercicios7;
 
 import java.util.ArrayList;
 import java.util.Arrays;

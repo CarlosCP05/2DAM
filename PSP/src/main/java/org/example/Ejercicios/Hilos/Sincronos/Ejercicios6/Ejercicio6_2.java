@@ -1,4 +1,4 @@
-package org.example.Ejercicios.Hilos.Sincrona.Ejercicios6;
+package org.example.Ejercicios.Hilos.Sincronos.Ejercicios6;
 
 import java.util.concurrent.ConcurrentHashMap;
 

@@ -1,4 +1,4 @@
-package org.example.Ejercicios.Hilos.Sincrona.Ejercicios8;
+package org.example.Ejercicios.Hilos.Sincronos.Ejercicios8;
 
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;

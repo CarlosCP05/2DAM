@@ -1,4 +1,4 @@
-package org.example.Ejercicios.Hilos.Sincrona.Ejercicio3;
+package org.example.Ejercicios.Hilos.Sincronos.Ejercicio3;
 
 public class Ejercicio3_2 {
     public static void main(String[] args) throws InterruptedException {

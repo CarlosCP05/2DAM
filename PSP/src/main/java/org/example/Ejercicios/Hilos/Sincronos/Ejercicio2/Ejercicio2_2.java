@@ -1,4 +1,4 @@
-package org.example.Ejercicios.Hilos.Sincrona.Ejercicio2;
+package org.example.Ejercicios.Hilos.Sincronos.Ejercicio2;
 
 public class Ejercicio2_2 {
     public static void main(String[] args) {
