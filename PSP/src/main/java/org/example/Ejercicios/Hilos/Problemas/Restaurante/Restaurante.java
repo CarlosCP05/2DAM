@@ -11,14 +11,15 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Restaurante {
     static Random rand = new Random();
-    private final Thread[] clientes = new Thread[100];
-    BlockingQueue<Pedido> mesas = new java.util.concurrent.LinkedBlockingQueue<>(10);
     AtomicInteger numCocinero = new AtomicInteger(0);
-    private final ExecutorService cocineros = Executors.newFixedThreadPool(3, r ->  new Thread(r, "Cocinero-" + numCocinero.incrementAndGet()));
     AtomicInteger numCamarero = new AtomicInteger(0);
-    private final ExecutorService camareros = Executors.newFixedThreadPool(5,  r ->  new Thread(r, "Camarero-" + numCamarero.incrementAndGet()));
     AtomicInteger clientesAtendidos = new AtomicInteger();
     AtomicInteger clientesPerdidos = new AtomicInteger(0);
+
+    BlockingQueue<Pedido> mesas = new java.util.concurrent.LinkedBlockingQueue<>(10);
+    private final Thread[] clientes = new Thread[100];
+    private final ExecutorService cocineros = Executors.newFixedThreadPool(3, r ->  new Thread(r, "Cocinero-" + numCocinero.incrementAndGet()));
+    private final ExecutorService camareros = Executors.newFixedThreadPool(5,  r ->  new Thread(r, "Camarero-" + numCamarero.incrementAndGet()));
     Map<Integer, Boolean> mesasDisponibles =  new ConcurrentHashMap<>();
     private Boolean abierto = true;
 
