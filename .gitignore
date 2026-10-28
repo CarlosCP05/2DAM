@@ -15,7 +15,6 @@ target/
 
 ### Gradle ###
 .gradle/
-build/
 
 ### Eclipse ###
 .apt_generated
