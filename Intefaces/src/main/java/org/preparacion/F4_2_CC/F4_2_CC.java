@@ -67,7 +67,7 @@ public class F4_2_CC {
         ventana.add(panelFin, gbc);
 
         gbc.gridy = 2;
-        gbc.weighty = 2;
+        gbc.weighty = 4;
         ventana.add(panel, gbc);
         ventana.setVisible(true);
     }
