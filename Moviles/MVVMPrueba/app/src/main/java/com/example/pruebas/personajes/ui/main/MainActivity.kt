@@ -1,7 +1,6 @@
 package com.example.pruebas.personajes.ui.main
 
 import android.os.Bundle
-import android.view.WindowInsets
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
@@ -12,9 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvmprueba.R
 
 import com.example.mvvmprueba.databinding.MainPersonajesBinding
-import com.example.pruebas.personajes.ui.main.MainViewModel
 import com.example.pruebas.personajes.di.AppModule
-import com.example.pruebas.personajes.domain.model.Personaje
 import com.example.pruebas.personajes.ui.personajes.PersonajeAdapter
 
 
@@ -77,7 +74,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupEventos(){
         with(binding) {
-            /* No tengo un boton en el XML
+            /*
+            No tengo un boton en el XML
             button.setOnClickListener{
                 viewModel.handleDameMentiroso()
                 viewModel.handleObtenerPersonajes()

@@ -40,7 +40,6 @@ class PersonajeAdapter (
         fun bind(personaje: Personaje) {
             with(bindign) {
                 txtNombrePersonaje.text = personaje.nombre
-                // No tengo boton para borrar
                 root.setOnClickListener {
                     onClickDeleted(personaje)
                 }

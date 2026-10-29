@@ -8,7 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.mvvmprueba.R
 
 class MainActivity : AppCompatActivity() {
-    private val binding : ActivityMainBinding by lazy{ ActvityMainBinding.inflate(layoutInflater)}
+   /* private val binding : ActivityMainBinding by lazy{ ActvityMainBinding.inflate(layoutInflater)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,4 +23,5 @@ class MainActivity : AppCompatActivity() {
 
         observarEstado
     }
+    */
 }

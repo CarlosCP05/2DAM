@@ -8,14 +8,14 @@ import com.example.mvvmprueba.domain.useCases.DamePresidenteUseCase
 
 class MainViewModel(val damePresidenteUseCase: DamePresidenteUseCase) : ViewModel() {
 
-    private val _state = MutableLiveData<MainState>(MainState("inicio"))
+    private val _state = MutableLiveData<MainState>(MainState("inicio", listOf()))
 
     val state : LiveData<MainState> = _state
 
     fun handleDamePresidente(): Unit {
         var president = damePresidenteUseCase.damePresidente()
 
-        _state.value = _state.value?.copy(presidente = president.toString()) ?: MainState(president.toString())
+        //_state.value = _state.value?.copy(presidente = president.toString()) ?: MainState(president.toString())
     }
 }
 

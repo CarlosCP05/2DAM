@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.mvvmprueba.ui.main.MainViewModel
 import com.example.pruebas.personajes.domain.model.Personaje
 import com.example.pruebas.personajes.domain.useCase.AddPersonajeUseCase
 import com.example.pruebas.personajes.domain.useCase.DameMentirosoUseCase
