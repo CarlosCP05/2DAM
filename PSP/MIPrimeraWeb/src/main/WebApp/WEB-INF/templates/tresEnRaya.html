@@ -3,12 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        #tabla{
+            border: black 1.5px solid;
+            width: fit-content;
+        }
+
+        .fila{
+            margin: 0;
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .casilla{
+            margin: 0;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            align-content: center;
+            padding: 2px;
+            border: black 1px solid;
+        }
+    </style>
 </head>
 <body>
 
-<h1 th:text="${fila1}">Contenido</h1>
-<h1 th:text="${fila2}">Contenido</h1>
-<h1 th:text="${fila3}">Contenido</h1>
+<h1 th:utext="${txtTurno}">Contenido</h1>
+
+<div id="tabla">
+    <div class="fila" th:utext="${fila1}">Contenido</div>
+    <div class="fila" th:utext="${fila2}">Contenido</div>
+    <div class="fila" th:utext="${fila3}">Contenido</div>
+</div>
 
 
 </body>
