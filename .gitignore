@@ -12,9 +12,11 @@ target/
 *.iws
 *.iml
 *.ipr
+**/.idea/
 
 ### Gradle ###
 .gradle/
+**/.gradle/
 
 ### Eclipse ###
 .apt_generated
