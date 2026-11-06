@@ -24,7 +24,6 @@ public class F4_4_CC {
         fondo.setLayout(new GridBagLayout());
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         encabezado.setLayout(new GridBagLayout());
-//        botonesPanel.setLayout(new GridLayout(5, 4));
         botonesPanel.setLayout(new GridBagLayout());
 
         fondo.setBackground(Color.DARK_GRAY);
@@ -48,6 +47,8 @@ public class F4_4_CC {
             if (btn.getText().equals("C") || btn.getText().equals("()") || btn.getText().equals("%") || btn.getText().equals("±") || btn.getText().equals(",")) {
                 btn.setBackground(Color.yellow);
             }
+
+            if (btn.getText().equals("=")) btn.setBackground(Color.green);
 
             if (btn.getText().equals("⌫")) {
                 // Problema de Arial con el Unicode
@@ -140,11 +141,28 @@ public class F4_4_CC {
                 operacion.setText(cambiarSigno(texto));
                 break;
 
+            case "()":
+                operacion.setText(cambiarParentesis(texto));
+                break;
+
             default:
                 if (texto.equals("Error")) texto = "";
                 operacion.setText(texto + boton);
                 break;
         }
+    }
+
+    private static String cambiarParentesis(String texto) {
+        int abiertos = 0;
+        int cerrados = 0;
+
+        for (int i = 0; i < texto.length(); i++) {
+            if (texto.charAt(i) == '(') abiertos++;
+            if (texto.charAt(i) == ')') cerrados++;
+        }
+
+        if (abiertos > cerrados) return texto + ")";
+        else return texto + "(";
     }
 
     private static double calcular(String texto) {
