@@ -21,6 +21,8 @@ public class Inscripcion extends HttpServlet {
         ArrayList<String> jugadores = (ArrayList<String>) req.getSession().getAttribute("jugadores");
         Boolean inscripcionDisponible = (Boolean) req.getSession().getAttribute("inscripcionDisponible") ;
 
+        if (eliminarInp == null) eliminarInp = "";
+
         if (inscripcionDisponible == null) inscripcionDisponible = true;
 
         if (jugadores == null) jugadores = new ArrayList<>();
@@ -28,7 +30,7 @@ public class Inscripcion extends HttpServlet {
         boolean coincidencia = false;
 
         if (inscripcionDisponible) {
-            if (nombre != null && !nombre.isEmpty()) {
+            if (nombre == null || nombre.isEmpty()) {
                 resp.sendError(
                     HttpServletResponse.SC_BAD_REQUEST,
                     "Hay que introducir el nombre del jugador."
@@ -65,11 +67,11 @@ public class Inscripcion extends HttpServlet {
         out.println("<body>");
         if (eliminarInp.equals("Si") && inscripcionDisponible) {
             if (coincidencia) out.println("<h3>Jugador: " + nombre + " eliminado</h3>");
-            else out.println("<h3>Jugador: " + nombre + "no encontrado</h3>");
+            else out.println("<h3>Jugador: " + nombre + " no encontrado</h3>");
             out.println("</br>");
         }
         else if (coincidencia) {
-            out.println("<h3>Jugador: " + nombre + "ya estaba agregado</h3>");
+            out.println("<h3>Jugador: " + nombre + " ya estaba agregado</h3>");
             out.println("</br>");
         }
         else if (!inscripcionDisponible) {
@@ -83,7 +85,7 @@ public class Inscripcion extends HttpServlet {
         out.println("</br>");
         out.println("</br>");
         if (inscripcionDisponible) {
-            out.println("<span>Para eliminar un jugador inscrito añade al campo eliminar \"Si\" con el nombre del jugador que quiera eliminar</span>");
+            out.println("<span>Para eliminar un jugador inscrito añade al campo \"Eliminar\" con valor \"Si\" poniendo el nombre del jugador que quiera eliminar</span>");
         }
         out.println("</body>");
         out.println("</html>");

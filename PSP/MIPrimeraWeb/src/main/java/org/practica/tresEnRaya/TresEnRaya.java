@@ -39,6 +39,7 @@ public class TresEnRaya extends HttpServlet {
         boolean reiniciar = false;
         boolean partidaTerminada = false;
         Partida partida = new Partida();
+        String marcaVacia = "-";
 
         if (partidaEnCurso == null || !partidaEnCurso) {
             resp.sendError(
@@ -48,7 +49,12 @@ public class TresEnRaya extends HttpServlet {
             return;
         }
 
-        if (tablero == null) tablero = new String[]{"-", "-", "-", "-", "-", "-", "-", "-", "-"};
+        if(marca1.equals(marcaVacia) || marca2.equals(marcaVacia)) {
+            if (marca1.equals("·") || marca2.equals("·")) marcaVacia = "=";
+            else marcaVacia = "·";
+        }
+
+        if (tablero == null) tablero = new String[]{marcaVacia, marcaVacia, marcaVacia, marcaVacia, marcaVacia, marcaVacia, marcaVacia, marcaVacia, marcaVacia};
 
         if (marca == null) marca = empiezaJugador1 ? marca1 : marca2;
 
@@ -64,7 +70,7 @@ public class TresEnRaya extends HttpServlet {
         }
 
         if (reiniciar) {
-            tablero = new String[]{"-", "-", "-", "-", "-", "-", "-", "-", "-"};
+            tablero = new String[]{marcaVacia, marcaVacia, marcaVacia, marcaVacia, marcaVacia, marcaVacia, marcaVacia, marcaVacia, marcaVacia};
             marca = empiezaJugador1 ? marca1 : marca2;
             numTurnos = 0;
             movimientos = new ArrayList<>();
@@ -205,7 +211,6 @@ public class TresEnRaya extends HttpServlet {
     }
 
     private boolean hayGanador(String[] tablero, String marca) {
-
         int[][] combinaciones = {
                 {0, 1, 2},
                 {3, 4, 5},

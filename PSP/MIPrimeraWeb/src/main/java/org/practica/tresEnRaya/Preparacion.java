@@ -79,8 +79,8 @@ public class Preparacion extends HttpServlet {
         }
         else {
             out.println("<h1>Preparación de la partida</h1>");
-            out.println("<p>" + jugador1 + " - " + marca1 + "</p>");
-            out.println("<p>" + jugador2 + " - " + marca2 + "</p>");
+            out.println("<p>" + jugador1 + " - Marca: " + marca1 + "</p>");
+            out.println("<p>" + jugador2 + " - Marca: " + marca2 + "</p>");
             out.println("<h2>Empieza la partida:</h2>");
             out.println("<h3>Empieza poniendo: " + (empiezaJugador1 ? jugador1 : jugador2) + "</h3>");
         }

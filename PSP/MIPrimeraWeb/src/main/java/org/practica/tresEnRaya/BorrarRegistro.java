@@ -17,7 +17,6 @@ public class BorrarRegistro extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         String nombre = req.getParameter("nombre");
 
         ArrayList<String> jugadores = (ArrayList<String>) req.getSession().getAttribute("jugadores");
@@ -38,10 +37,7 @@ public class BorrarRegistro extends HttpServlet {
             for (int i = partidas.size() - 1; i >= 0; i--) {
                 Partida partida = partidas.get(i);
 
-                if (Objects.equals(nombre, partida.getJugador1()) ||
-                        Objects.equals(nombre, partida.getJugador2())) {
-                    partidas.remove(i);
-                }
+                if (Objects.equals(nombre, partida.getJugador1()) || Objects.equals(nombre, partida.getJugador2())) partidas.remove(i);
             }
 
             req.getSession().setAttribute("jugadores", jugadores);
@@ -66,7 +62,6 @@ public class BorrarRegistro extends HttpServlet {
             out.println("<h3>" + error + "</h3>");
         }
         out.println("<h1>Jugadores inscritos:</h1>");
-
         for (String jugador : jugadores) {
             out.println("<p> · " + jugador + "</p>");
         }
